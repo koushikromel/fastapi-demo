@@ -7,7 +7,7 @@ app = FastAPI()
 @app.get("/")
 async def hello():
     ist_now = datetime.now(timezone.utc).astimezone(timezone(timedelta(hours=5, minutes=30)))
-    formatted_time = ist_now.strftime("%Y-%m-%d %I:%M %p")
+    formatted_time = ist_now.strftime("%Y-%m-%d %I:%M:%S %p")
     return f"Hello world {formatted_time}"
 
 
